@@ -66,7 +66,6 @@ public class ProductController {
         return "redirect:/products";
     }
 
-    // Xóa sản phẩm: hiển thị form xác nhận
     @GetMapping("/delete/{id}")
     public String showDeleteForm(@PathVariable Long id, Model model, RedirectAttributes redirect) {
         Product product = productService.findById(id);
@@ -78,7 +77,6 @@ public class ProductController {
         return "product/delete"; // form delete riêng
     }
 
-    // Xử lý xóa khi submit form
     @PostMapping("/delete")
     public String deleteProduct(@ModelAttribute Product product, RedirectAttributes redirect) {
         Product p = productService.findById(product.getId());

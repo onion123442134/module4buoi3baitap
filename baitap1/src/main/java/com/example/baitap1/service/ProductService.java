@@ -11,7 +11,7 @@ import java.util.stream.Collectors;
 public class ProductService implements IProductService {
 
     private List<Product> products = new ArrayList<>();
-    private long nextId = 3; // ID bắt đầu từ 3 (giả lập 2 sản phẩm ban đầu)
+    private long nextId = 3;
 
     public ProductService() {
         products.add(new Product(1L, "Laptop", 1000, "Gaming Laptop", "Dell"));

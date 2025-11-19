@@ -17,5 +17,5 @@ public interface IProductService {
 
     List<Product> searchByName(String keyword);
 
-    Long generateId(); // tạo ID tự động
+    Long generateId();
 }

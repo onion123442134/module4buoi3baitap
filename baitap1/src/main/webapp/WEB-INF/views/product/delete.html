@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 
-<!-- Gọi head từ layout -->
 <head>
     <title th:replace="layout :: title">Delete Product</title>
     <th:block th:replace="layout :: head"></th:block>
@@ -9,7 +8,6 @@
 
 <body>
 
-<!-- Header -->
 <div th:replace="layout :: header"></div>
 
 <h3>Delete Product</h3>
@@ -26,12 +24,10 @@
     <a th:href="@{/products}">Cancel</a>
 </form>
 
-<!-- Hiển thị thông báo lỗi nếu có -->
 <div th:if="${#fields.hasGlobalErrors()}">
     <p th:each="err : ${#fields.globalErrors()}" th:text="${err}"></p>
 </div>
 
-<!-- Footer -->
 <div th:replace="layout :: footer"></div>
 
 </body>
