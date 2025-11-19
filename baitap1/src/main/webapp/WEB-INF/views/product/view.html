@@ -1,15 +1,32 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+
 <head>
-    <title>View Product</title>
+    <title th:replace="layout :: title">View Product</title>
+    <th:block th:replace="layout :: head"></th:block>
 </head>
+
 <body>
+
+<!-- Header -->
+<div th:replace="layout :: header"></div>
+
 <h3>Product Details</h3>
-<p>ID: <span th:text="${product.id}"></span></p>
-<p>Name: <span th:text="${product.name}"></span></p>
-<p>Price: <span th:text="${product.price}"></span></p>
-<p>Description: <span th:text="${product.description}"></span></p>
-<p>Manufacturer: <span th:text="${product.manufacturer}"></span></p>
-<a th:href="@{/products}">Back to list</a>
+
+<div id="form">
+    <p><strong>ID:</strong> <span th:text="${product.id}"></span></p>
+    <p><strong>Name:</strong> <span th:text="${product.name}"></span></p>
+    <p><strong>Price:</strong> <span th:text="${product.price}"></span></p>
+    <p><strong>Description:</strong> <span th:text="${product.description}"></span></p>
+    <p><strong>Manufacturer:</strong> <span th:text="${product.manufacturer}"></span></p>
+
+    <a th:href="@{/products}">
+        <button>Back to list</button>
+    </a>
+</div>
+
+<!-- Footer -->
+<div th:replace="layout :: footer"></div>
+
 </body>
 </html>
